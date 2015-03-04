@@ -232,6 +232,18 @@
 								offset: $header.outerHeight() - 1
 							});
 
+						// Resize fullscreen elements
+						if (1) {
+							$('.fullscreen').each(function() {
+								var $t = $(this),
+								$c = $t.children('.content'),
+								x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
+								$t.css('padding-top', x).css('padding-bottom', x);
+							});
+						}
+						else
+							$('.fullscreen').css('padding-top', '').css('padding-bottom', '');
+
 						// Re-enable animations/transitions.
 							window.setTimeout(function() {
 								$body.removeClass('is-resizing');
