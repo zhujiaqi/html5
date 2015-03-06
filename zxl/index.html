@@ -17,17 +17,21 @@
 		<script src="js/jquery.scrollex.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/jquery.fullPage.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/vendors/jquery.easings.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/vendors/jquery.slimscroll.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 			<link rel="stylesheet" href="css/style-normal.css" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/jquery.fullPage.min.css" />
+
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body>
-
 		<!-- Header -->
 			<header id="header">
 
@@ -35,9 +39,9 @@
 					<h1 id="logo">赵香兰南洋火锅</h1>
 
 			</header>
-
+		<div id="fullpage">
 		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
+			<section id="intro" data-menuanchor="a" class="main style1 dark section fullscreen">
 				<div class="content container 75%">
 					<header>
 						<h2>Hey.</h2>
@@ -45,14 +49,11 @@
 					<p>Welcome to <strong>Big Picture</strong> a responsive site template designed
 					by <a href="http://html5up.net">HTML5 UP</a>, built on <strong><a href="http://getskel.com">Skel</a></strong>,
 					and released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>.</p>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
 				</div>
 			</section>
 
 		<!-- One -->
-			<section id="one" class="main style2 dark fullscreen">
+			<section id="one" data-menuanchor="b" class="main style2 dark fullscreen section">
 				<div class="content style2">
 					<header>
 						<h2>虾贝套餐（大）</h2>
@@ -60,15 +61,12 @@
 					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
 					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
 					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-					<footer>
-						<a href="#two" class="button style2 down">Next</a>
-					</footer>
 				</div>
 
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="main style2 dark fullscreen">
+			<section id="two" data-menuanchor="c" class="main style2 dark fullscreen section">
 				<div class="content style2">
 					<header>
 						<h2>泰式酸辣锅</h2>
@@ -76,13 +74,10 @@
 					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
 					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
 					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-					<footer>
-						<a href="#three" class="button style2 down">Next</a>
-					</footer>
 				</div>
 			</section>
 
-			<section id="three" class="main style2 dark fullscreen">
+			<section id="three" data-menuanchor="d" class="main style2 dark fullscreen section">
 				<div class="content style2">
 					<header>
 						<h2>虾贝套餐（小）</h2>
@@ -90,13 +85,10 @@
 					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
 					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
 					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-					<footer>
-						<a href="#four" class="button style2 down">Next</a>
-					</footer>
 				</div>
 			</section>
 
-			<section id="four" class="main style2 dark fullscreen">
+			<section id="four" data-menuanchor="e" class="main style2 dark fullscreen section">
 				<div class="content box style2">
 					<header>
 						<h2>来点纯悦</h2>
@@ -104,11 +96,10 @@
 					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
 					</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Work -->
-			<section id="work" class="main style3 primary">
+			<section id="work" data-menuanchor="f" class="main style3 primary section">
 				<div class="content container">
 					<header>
 						<h2>就餐环境</h2>
@@ -130,7 +121,7 @@
 			</section>
 
 		<!-- Contact -->
-			<section id="contact" class="main style3 primary">
+			<section id="contact" data-menuanchor="g" class="main style3 primary section">
 				<div class="content container">
 					<header>
 						<h2>关注我们</h2>
@@ -146,16 +137,8 @@
 					</div>
 				</div>
 			</section>
+		</div>
 
-		<!-- Footer -->
-			<footer id="footer">
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; 北京市纯悦生活科技有限公司</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</footer>
 
 	</body>
 </html>

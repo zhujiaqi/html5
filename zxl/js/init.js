@@ -89,129 +89,23 @@
 				usePopupNav: true
 			});
 
-		// Section transitions.
-			if (!skel.vars.isMobile
-			&&	skel.canUseProperty('transition')) {
-
-				var on = function() {
-
-					// Generic sections.
-						$('.main.style1')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-						$('.main.style2')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-					// Work.
-						$('#work')
-							.scrollex({
-								top:		'40vh',
-								bottom:		'30vh',
-								delay:		50,
-								initialize:	function() {
-
-												var t = $(this);
-
-												t.find('.row.images')
-													.addClass('inactive');
-
-											},
-								terminate:	function() {
-
-												var t = $(this);
-
-												t.find('.row.images')
-													.removeClass('inactive');
-
-											},
-								enter:		function() {
-
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
-
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.removeClass('inactive');
-													}, 100 * (length - n++));
-												});
-
-											},
-								leave:		function(t) {
-
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
-
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.addClass('inactive');
-													}, 100 * (length - n++));
-												});
-
-											}
-							});
-
-					// Contact.
-						$('#contact')
-							.scrollex({
-								top:		'50%',
-								delay:		50,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-				};
-
-				var off = function() {
-
-					// Generic sections.
-						$('.main.style1')
-							.unscrollex();
-
-						$('.main.style2')
-							.unscrollex();
-
-					// Work.
-						$('#work')
-							.unscrollex();
-
-					// Contact.
-						$('#contact')
-							.unscrollex();
-
-				};
-
-				skel.change(function() {
-
-					if (skel.isActive('mobile'))
-						(off)();
-					else
-						(on)();
-
-				});
-
-			}
+			$('#fullpage').fullpage({
+				normalScrollElements: '#work, #contact',
+				fixedElements: '#header',
+				anchors:['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+				scrollOverflow: true,
+				verticalCentered: false,
+				fitToSection: true,
+				afterRender: function(){
+					// Resize fullscreen elements
+					$('.fullscreen').each(function() {
+						var $t = $(this),
+						$c = $t.children('.content'),
+						x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
+						$t.css('padding-top', x).css('padding-bottom', x);
+					});
+				}
+			});
 
 		// Events.
 			var resizeTimeout, resizeScrollTimeout;
@@ -225,24 +119,6 @@
 					window.clearTimeout(resizeTimeout);
 
 					resizeTimeout = window.setTimeout(function() {
-
-						// Update scrolly links.
-							$('a[href^=#]').scrolly({
-								speed: 1500,
-								offset: $header.outerHeight() - 1
-							});
-
-						// Resize fullscreen elements
-						if (1) {
-							$('.fullscreen').each(function() {
-								var $t = $(this),
-								$c = $t.children('.content'),
-								x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
-								$t.css('padding-top', x).css('padding-bottom', x);
-							});
-						}
-						else
-							$('.fullscreen').css('padding-top', '').css('padding-bottom', '');
 
 						// Re-enable animations/transitions.
 							window.setTimeout(function() {
