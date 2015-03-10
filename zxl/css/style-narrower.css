@@ -15,22 +15,23 @@
 	.container > .container {
 		width: 100% !important;
 	}
-	
+
 	/* Main */
-		
+
 		.main {
 		}
-		
+
 			.main.style2 {
 			}
-			
+
 				.main.style2 .content {
-					width: 60%;
+					width: 90%;
+
 				}
-			
-					.main.style2.right .content {
-						left: 40%;
-					}
+				.main.style2 .content p {
+					width: 1.5em;
+					float: right;
+				}
 
 				.main.style2.inactive {
 				}
@@ -38,14 +39,11 @@
 					.main.style2.inactive .content {
 					}
 
-						.main.style2.inactive.left .content {
-							left: -60%;
-						}
-						
+
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
-	
+
 	#footer {
 		height: auto;
 		line-height: inherit;
@@ -61,7 +59,7 @@
 			line-height: inherit;
 			margin: 0 0 1em 0;
 		}
-		
+
 		#footer .menu {
 			position: relative;
 			right: 0;

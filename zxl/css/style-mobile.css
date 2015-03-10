@@ -52,7 +52,7 @@
 				}
 
 			.main.style2 {
-				padding: 6em 15px 6em 15px;
+				padding: 2em 15px 6em 15px;
 			}
 
 				.main.style2:before,
@@ -67,7 +67,11 @@
 				.main.style2 .content {
 					width: 100%;
 					left: 0% !important;
-					text-align: center;
+					text-align: right;
+				}
+				.main.style2 .content p {
+					width: 1.5em;
+					float: right;
 				}
 
 				.main.style2 .tmp {

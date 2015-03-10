@@ -859,23 +859,18 @@
 				}
 
 /*********************************************************************************/
-/* Intro                                                                         */
-/*********************************************************************************/
-
-	#intro {
-		background: url('images/overlay.png'), url('../images/zxl_cover.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
-
-/*********************************************************************************/
 /* One                                                                           */
 /*********************************************************************************/
 
+	#intro {
+		background: url('images/overlay.png'), url('../images/1.JPG');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
 	#one {
-		background: url('images/overlay.png'), url('../images/IMG_1737.JPG');
+		background: url('images/overlay.png'), url('../images/IMG_1738.JPG');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -900,7 +895,7 @@
 /*********************************************************************************/
 
 	#two {
-		background: url('images/overlay.png'), url('../images/IMG_1738.JPG');
+		background: url('images/overlay.png'), url('../images/IMG_1737.JPG');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;

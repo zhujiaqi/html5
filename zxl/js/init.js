@@ -94,9 +94,9 @@
 				fixedElements: '#header',
 				anchors:['a', 'b', 'c', 'd', 'e', 'f', 'g'],
 				scrollOverflow: true,
-				verticalCentered: false,
+				verticalCentered: true,
 				fitToSection: true,
-				afterRender: function(){
+				/*afterRender: function(){
 					// Resize fullscreen elements
 					$('.fullscreen').each(function() {
 						var $t = $(this),
@@ -104,7 +104,7 @@
 						x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
 						$t.css('padding-top', x).css('padding-bottom', x);
 					});
-				}
+				}*/
 			});
 
 		// Events.
